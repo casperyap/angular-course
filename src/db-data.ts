@@ -1,6 +1,6 @@
+import {Course} from "./app/model/course";
 
-
-export const COURSES: any = [
+export const COURSES: Course[] = [
 
     {
         id: 1,
