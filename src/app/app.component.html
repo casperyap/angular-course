@@ -5,6 +5,12 @@
 
 </div>
 
+<div class="demo">
+  <h1>{{header | uppercase}}</h1>
+  <h2>{{price | currency}}</h2>
+  <div>Start Date: {{startDate | date: 'dd MMM yyyy'}}</div>
+</div>
+
 <div class="courses">
   @for (course of courses; track course.id; let count = $count; 
         let first=$first; let last=$last; let even = $even; let odd = $odd) {
