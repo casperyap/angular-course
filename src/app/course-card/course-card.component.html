@@ -16,6 +16,23 @@
     <h2>No image available!</h2>
   }
 
+  <div class="course-category">
+    @switch (this.course.category) {
+      @case ("BEGINNER"){
+        <div class="category">Beginner</div>
+      }
+      @case ("INTERMEDIATE"){
+        <div class="category">Intermediate</div>
+      }
+      @case ("ADVANCED"){
+        <div class="category">Advanced</div>
+      }
+      @default{
+        <div class="category">Unknown</div>
+      }
+    }
+  </div>
+
   <!-- <img width="300" alt="Angular Logo" *ngIf="course.iconUrl; else noImage"  
     src={{course.iconUrl}}
   >
