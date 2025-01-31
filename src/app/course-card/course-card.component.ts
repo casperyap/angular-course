@@ -28,4 +28,24 @@ export class CourseCardComponent implements OnInit{
         console.log("card component - button clicked ...");
         this.courseEmiitter.emit(this.course);
     }
+
+    getCardClass(curr_course:Course){
+      let cardClass:String = '';
+
+      switch (curr_course.category) {
+        case "BEGINNER":
+          cardClass = 'beginner';
+          break
+        case "INTERMEDIATE":
+          cardClass = 'intermediate';
+          break
+        case "ADVANCED":
+          cardClass = 'advanced';
+          break
+        default:
+          cardClass = 'intermediate';
+      }
+
+      return cardClass;
+    }
 }

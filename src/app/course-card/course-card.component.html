@@ -1,7 +1,9 @@
-<div class="course-card">
+<div class="course-card" 
+  [ngClass]="getCardClass(course)"
+>
 
   <div class="course-title">
-    {{index}} {{course.description}}
+    {{course.id}} {{course.description}}
   </div>
 
   @if (course.id == 1) {
