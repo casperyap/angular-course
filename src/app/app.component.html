@@ -8,15 +8,21 @@
 <div>
 
   <div class="courses">
+    @if (courses$ | async; as courses) {
+      @for (course of courses; track course.id) {
+        <course-card [course]="course">
+          <course-image [src]="course.iconUrl"></course-image>
+        </course-card>
+      }
+    }
+  </div>
 
+  <!-- <div class="courses" *ngIf="courses$ | async as courses">
     <course-card *ngFor="let course of courses"
                  [course]="course">
-
       <course-image [src]="course.iconUrl"></course-image>
-
     </course-card>
-
-  </div>
+  </div> -->
 
 
 </div>
