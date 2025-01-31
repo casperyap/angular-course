@@ -14,6 +14,14 @@
     <h2>No image available!</h2>
   }
 
+  <!-- <img width="300" alt="Angular Logo" *ngIf="course.iconUrl; else noImage"  
+    src={{course.iconUrl}}
+  >
+
+  <ng-template #noImage>
+    <h2>No image available!</h2>
+  </ng-template> -->
+
   <div class="course-description">
     {{course.longDescription}}
   </div>
