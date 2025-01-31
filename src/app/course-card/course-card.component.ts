@@ -29,10 +29,10 @@ export class CourseCardComponent implements OnInit{
         this.courseEmiitter.emit(this.course);
     }
 
-    getCardClass(curr_course:Course){
+    getCardClass(){
       let cardClass:String = '';
 
-      switch (curr_course.category) {
+      switch (this.course.category) {
         case "BEGINNER":
           cardClass = 'beginner';
           break
@@ -47,5 +47,11 @@ export class CourseCardComponent implements OnInit{
       }
 
       return cardClass;
+    }
+
+    getCardStyle(){
+      return {
+        'text-decoration': 'underline'
+      };
     }
 }
